@@ -3,13 +3,13 @@
 Part 2 of the Python bootcamp of the
 [M1 AIRE master](https://master.learningplanetinstitute.org/en/m1-aire) at
 the Learning Planet Institute. Two lectures and two practicals take the
-students from lists and loops to NumPy arrays, plots, light pandas, and a
-fitted line. The bootcamp prepares them for the statistics course that
-follows. Slides are Quarto revealjs decks rendered directly from Jupyter
-notebooks. All data comes from
-one open dataset: a rat walking in an arena during functional ultrasound
-imaging (Cybis Pereira et al., Cell Reports 2026, OSF project 2v6f7, CC-BY 4.0).
-Every notebook downloads the files it needs on first run.
+students from lists and loops to NumPy arrays, plots, a bit of pandas, and a
+some linear regression. The bootcamp prepares them for statistics and data
+science courses that follows. Slides are Quarto `revealjs`  rendered directly
+from Jupyter notebooks. All data comes from one open dataset: a rat walking in
+an arena during functional ultrasound imaging (Cybis Pereira et al., Cell
+Reports 2026, OSF project 2v6f7, CC-BY 4.0). Every notebook downloads the
+files it needs on first run.
 
 ## Teacher setup
 
