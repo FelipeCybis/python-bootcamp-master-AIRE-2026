@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.quarto/
+_site/
+# ponytail: data is fetched by every notebook into its own dir; never commit it
+**/data/
+lectures/*.png
+practicals/*.png
+
+/.quarto/
+**/*.quarto_ipynb
