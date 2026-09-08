@@ -35,7 +35,8 @@ own `output-file` in its first raw cell.
 ## Practicals
 
 `practicals/*.ipynb` are the solutions. Cells tagged `solution` become
-`# YOUR CODE HERE` in the student versions:
+`# YOUR CODE HERE` in the student versions. Comment lines at the top of a
+`solution` cell stay in the student version as a hint:
 
 ```bash
 uv run python tools/strip_solutions.py                 # writes practicals/student/

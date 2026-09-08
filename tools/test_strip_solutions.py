@@ -20,6 +20,7 @@ nb = {
         cell("code", "x = 42", tags=["solution"], outputs=[{"output_type": "stream", "text": "hi"}]),
         cell("markdown", "The answer is 42.", tags=["solution"]),
         cell("code", "assert x == 42", outputs=[{"output_type": "stream", "text": "ok"}]),
+        cell("code", ["# hint line\n", "# another\n", "y = 1  # not a hint\n", "# trailing\n"], tags=["solution"]),
     ],
     "metadata": {},
     "nbformat": 4,
@@ -27,9 +28,10 @@ nb = {
 }
 
 out = strip(nb)
-assert [c["cell_type"] for c in out["cells"]] == ["markdown", "code", "code"]
+assert [c["cell_type"] for c in out["cells"]] == ["markdown", "code", "code", "code"]
 assert out["cells"][1]["source"] == PLACEHOLDER
 assert out["cells"][2]["source"] == "assert x == 42"
+assert out["cells"][3]["source"] == "# hint line\n# another\n" + PLACEHOLDER, "leading comments stay as the hint"
 assert all(c["outputs"] == [] and c["execution_count"] is None for c in out["cells"] if c["cell_type"] == "code")
 assert nb["cells"][1]["source"] == "x = 42", "input notebook must not be mutated"
 print("ok")
